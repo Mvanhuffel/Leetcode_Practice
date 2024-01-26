@@ -22,8 +22,17 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
 df = createDataframe(student_data)
 print(df)
 ```
+Solution:
+```
+   student_id  age
+0           1   15
+1           2   11
+2           3   11
+3           4   20
+```
 
-## 2. Get the size of a datafram
+
+## 2. Get the size of a dataframe
 
 Write a solution to calculate and display the number of rows and columns of players.
 Return the result as an array:
@@ -32,4 +41,9 @@ Return the result as an array:
 print(df_players.shape)
 num_rows, num_columns = df_players.shape
 print(f"This DataFrame contains {num_rows} rows and {num_columns} columns.")
+```
+Solution:
+```
+(10, 5)
+This DataFrame contains 10 rows and 5 columns.
 ```
