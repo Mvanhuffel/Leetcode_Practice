@@ -13,16 +13,20 @@ student_data = [
   [3, 11],
   [4, 20]
 ]
-
+# Define a function createDataframe that takes student_data as input
 def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
+    # Define column names for the DataFrame
     column_names = ['student_id', 'age']
+    # Create a DataFrame using the provided data and column names
     result = pd.DataFrame(student_data, columns=column_names)
+    # Return the resulting DataFrame
     return result
 
+# Call the createDataframe function with student_data and store the result in df
 df = createDataframe(student_data)
 print(df)
 ```
-Solution:
+Output:
 ```
    student_id  age
 0           1   15
