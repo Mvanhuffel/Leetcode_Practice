@@ -43,7 +43,7 @@ Write a solution to calculate and display the number of rows and columns of play
 Return the result as an array:
 
 ```ruby
-# Assume that df_players is the DataFrame you want to calculate the size of
+# df_players is the DataFrame
 
 # Calculate the shape (number of rows and columns) of the DataFrame and print it
 print(df_players.shape)
