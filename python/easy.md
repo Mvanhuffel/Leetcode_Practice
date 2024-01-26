@@ -22,3 +22,14 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
 df = createDataframe(student_data)
 print(df)
 ```
+
+## 2. Get the size of a datafram
+
+Write a solution to calculate and display the number of rows and columns of players.
+Return the result as an array:
+
+```ruby
+print(df_players.shape)
+num_rows, num_columns = df_players.shape
+print(f"This DataFrame contains {num_rows} rows and {num_columns} columns.")
+```
