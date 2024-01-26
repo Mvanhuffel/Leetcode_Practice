@@ -13,6 +13,7 @@ student_data = [
   [3, 11],
   [4, 20]
 ]
+
 # Define a function createDataframe that takes student_data as input
 def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
     # Define column names for the DataFrame
