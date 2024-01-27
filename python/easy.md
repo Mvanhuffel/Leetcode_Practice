@@ -14,13 +14,9 @@ student_data = [
   [4, 20]
 ]
 
-# Define a function createDataframe that takes student_data as input
 def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
-    # Define column names for the DataFrame
     column_names = ['student_id', 'age']
-    # Create a DataFrame using the provided data and column names
     result = pd.DataFrame(student_data, columns=column_names)
-    # Return the resulting DataFrame
     return result
 
 # Call the createDataframe function with student_data and store the result in df
@@ -36,7 +32,6 @@ Return the result as an array:
 ```ruby
 # df_players is the DataFrame
 
-# Calculate the shape (number of rows and columns) of the DataFrame and print it
 print(df_players.shape)
 # Extract the number of rows and columns from the shape tuple
 num_rows, num_columns = df_players.shape
