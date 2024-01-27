@@ -1,5 +1,6 @@
+
+# Create a dataframe from list
 """
-Create a dataframe from list
 Write a solution to create a DataFrame from a 2D list called student_data. 
 This 2D list contains the IDs and ages of some students. The DataFrame should have two columns, student_id and age, and be in the same order as the original 2D list.
 """
@@ -19,25 +20,23 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
     result = pd.DataFrame(student_data, columns=column_names)
     return result
 
-# Call the createDataframe function with student_data and store the result in df
 df = createDataframe(student_data)
 print(df)
-```
 
+
+# Get the size of a dataframe
 """
-Get the size of a dataframe
 Write a solution to calculate and display the number of rows and columns of players.
 Return the result as an array:
 """
-# df_players is the DataFrame
 
 print(df_players.shape)
-# Extract the number of rows and columns from the shape tuple
 num_rows, num_columns = df_players.shape
 print(f"This DataFrame contains {num_rows} rows and {num_columns} columns.")
 
+
+# Display the first 3 rows
 """
-Display the first 3 rows
 Write a solution to display the first 3 rows of this DataFrame.
 """
 import pandas as pd
@@ -45,8 +44,9 @@ import pandas as pd
 def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
     return employees.head(3)
 
+
+# Select data
 """
-Select data
 Write a solution to select the name and age of the student with student_id = 101.
 """
 import pandas as pd
@@ -54,8 +54,8 @@ import pandas as pd
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
     return students.query('student_id == 101')[['name', 'age']]
 
+# Create a new column
 """
-Create a new column
 A company plans to provide its employees with a bonus.
 Write a solution to create a new column name bonus that contains the doubled values of the salary column.
 """
