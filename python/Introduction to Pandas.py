@@ -1,4 +1,3 @@
-
 # Create a dataframe from list
 """
 Write a solution to create a DataFrame from a 2D list called student_data. 
@@ -39,6 +38,7 @@ print(f"This DataFrame contains {num_rows} rows and {num_columns} columns.")
 """
 Write a solution to display the first 3 rows of this DataFrame.
 """
+
 import pandas as pd
 
 def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
@@ -49,16 +49,19 @@ def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
 """
 Write a solution to select the name and age of the student with student_id = 101.
 """
+
 import pandas as pd
 
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
     return students.query('student_id == 101')[['name', 'age']]
+
 
 # Create a new column
 """
 A company plans to provide its employees with a bonus.
 Write a solution to create a new column name bonus that contains the doubled values of the salary column.
 """
+
 import pandas as pd
 
 def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
