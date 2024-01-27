@@ -27,15 +27,6 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
 df = createDataframe(student_data)
 print(df)
 ```
-Output:
-```
-   student_id  age
-0           1   15
-1           2   11
-2           3   11
-3           4   20
-```
-
 
 ## 2. Get the size of a dataframe
 
@@ -51,8 +42,38 @@ print(df_players.shape)
 num_rows, num_columns = df_players.shape
 print(f"This DataFrame contains {num_rows} rows and {num_columns} columns.")
 ```
-Output:
+
+## 3. Display the first 3 rows
+
+Write a solution to display the first 3 rows of this DataFrame.
+
+```ruby
+import pandas as pd
+
+def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
+    return employees.head(3)
 ```
-(10, 5)
-This DataFrame contains 10 rows and 5 columns.
+
+## 4. Select data
+
+Write a solution to select the name and age of the student with student_id = 101.
+
+```ruby
+import pandas as pd
+
+def selectData(students: pd.DataFrame) -> pd.DataFrame:
+    return students.query('student_id == 101')[['name', 'age']]
+```
+
+## 5. Create a new column
+
+A company plans to provide its employees with a bonus.
+Write a solution to create a new column name bonus that contains the doubled values of the salary column.
+
+```ruby
+import pandas as pd
+
+def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    employees['bonus'] = employees['salary'] * 2
+    return employees
 ```
