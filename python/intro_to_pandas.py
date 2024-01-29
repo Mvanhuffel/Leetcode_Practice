@@ -67,4 +67,35 @@ import pandas as pd
 def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
     employees['bonus'] = employees['salary'] * 2
     return employees
-  
+
+# Drop duplicated rows
+"""
+There are some duplicate rows in the DataFrame based on the email column.
+Write a solution to remove these duplicate rows and keep only the first occurrence.
+"""
+
+def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
+    customers = customers.drop_duplicates(subset='email', keep='first')
+    return customers
+
+# Drop missing data
+"""
+There are some rows having missing values in the name column.
+Write a solution to remove the rows with missing values.
+"""
+
+def dropMissingData(students: pd.DataFrame) -> pd.DataFrame:
+    students = students.dropna(subset='name')
+    return students
+
+# Modify columns
+"""
+A company intends to give its employees a pay rise.
+Write a solution to modify the salary column by multiplying each salary by 2.
+"""
+
+def modifySalaryColumn(df: pd.DataFrame) -> pd.DataFrame:
+  df['salary'] *= 2
+  return df
+
+
