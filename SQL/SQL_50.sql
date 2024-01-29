@@ -15,3 +15,21 @@ union
 select name, population, area
 from world
 where population >= 25000000;
+
+-- Write a solution to find all the authors that viewed at least one of their own articles. Order by ascending.
+Return the result table sorted by id in ascending order.
+select distinct author_id as id
+from views
+where author_id = viewer_id
+order by id asc;
+
+-- Write a solution to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
+select tweet_id
+from Tweets
+where length(content) > 15;
+
+-- Write a solution to show the unique ID of each user, If a user does not have a unique ID replace just show null.
+select emp.name, uni.unique_id
+from employees AS emp
+left join EmployeeUNI AS uni
+on emp.id = uni.id;
