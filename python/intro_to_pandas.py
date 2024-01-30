@@ -98,4 +98,33 @@ def modifySalaryColumn(df: pd.DataFrame) -> pd.DataFrame:
   df['salary'] *= 2
   return df
 
+# Rename columns
+"""
+Write a solution to rename the columns as follows:
+    id to student_id
+    first to first_name
+    last to last_name
+    age to age_in_years
+"""
 
+def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
+    students.columns = ['student_id', 'first_name', 'last_name', 'age_in_years']
+    return students
+
+# Change data type
+"""
+The grade column is stored as floats, convert it to integers.
+"""
+
+def changeDatatype(students: pd.DataFrame) -> pd.DataFrame:
+    students['grade'] = students['grade'].astype(int)
+    return students
+
+# Fill missing data
+"""
+Write a solution to fill in the missing value as 0 in the quantity column.
+"""
+
+def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
+    products['quantity'] = products['quantity'].fillna(0)
+    return products
