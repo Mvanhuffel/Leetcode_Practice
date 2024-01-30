@@ -33,3 +33,22 @@ select emp.name, uni.unique_id
 from employees AS emp
 left join EmployeeUNI AS uni
 on emp.id = uni.id;
+
+-- Write a solution to report the product_name, year, and price for each sale_id in the Sales table.
+select P.product_name, S.year, S.price
+from sales S
+inner join product P
+on S.product_id = P.product_id;
+
+-- Write a solution to find the IDs of the users who visited without making any transactions and the number of times they made these types of visits.
+select V.customer_id, COUNT(V.visit_id) as count_no_trans
+from Visits V
+left join Transactions T on V.visit_id = T.visit_id
+where T.transaction_id is null
+group by V.customer_id;
+
+-- Write a solution to find all dates' Id with higher temperatures compared to its previous dates (yesterday).
+select w1.id
+from weather w1, weather w2
+where datediff(w1.recordDate, w2.recordDate) = 1
+and w1.temperature > w2.temperature;
