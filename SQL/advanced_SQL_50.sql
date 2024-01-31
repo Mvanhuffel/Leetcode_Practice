@@ -1,5 +1,5 @@
 -- CUSTOMERS WHO BOUGHT PRODUCTS A AND B BUT NOT C
-/*Table: Customers
+/* Table: Customers
 +---------------------+---------+
 | Column Name         | Type    |
 +---------------------+---------+
@@ -21,7 +21,7 @@ order_id is the column with unique values for this table.
 customer_id is the id of the customer who bought the product "product_name".
 
 Write a solution to report the customer_id and customer_name of customers who bought products "A", "B" but did not buy the product "C" since we want to recommend them to purchase this product.
-Return the result table ordered by customer_id./**/
+Return the result table ordered by customer_id. /**/
 
 SELECT customer_id, customer_name
 FROM Customers
